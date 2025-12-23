@@ -1,0 +1,17 @@
+C:\dev\SwipeSense\SwipeSense\bin\Debug\net8.0-windows\SwipeSense.exe
+C:\dev\SwipeSense\SwipeSense\bin\Debug\net8.0-windows\SwipeSense.deps.json
+C:\dev\SwipeSense\SwipeSense\bin\Debug\net8.0-windows\SwipeSense.runtimeconfig.json
+C:\dev\SwipeSense\SwipeSense\bin\Debug\net8.0-windows\SwipeSense.dll
+C:\dev\SwipeSense\SwipeSense\bin\Debug\net8.0-windows\SwipeSense.pdb
+C:\dev\SwipeSense\SwipeSense\obj\Debug\net8.0-windows\SwipeSense.SwipeSenseForm.resources
+C:\dev\SwipeSense\SwipeSense\obj\Debug\net8.0-windows\SwipeSense.csproj.GenerateResource.cache
+C:\dev\SwipeSense\SwipeSense\obj\Debug\net8.0-windows\SwipeSense.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\SwipeSense\SwipeSense\obj\Debug\net8.0-windows\SwipeSense.AssemblyInfoInputs.cache
+C:\dev\SwipeSense\SwipeSense\obj\Debug\net8.0-windows\SwipeSense.AssemblyInfo.cs
+C:\dev\SwipeSense\SwipeSense\obj\Debug\net8.0-windows\SwipeSense.csproj.CoreCompileInputs.cache
+C:\dev\SwipeSense\SwipeSense\obj\Debug\net8.0-windows\SwipeSense.sourcelink.json
+C:\dev\SwipeSense\SwipeSense\obj\Debug\net8.0-windows\SwipeSense.dll
+C:\dev\SwipeSense\SwipeSense\obj\Debug\net8.0-windows\refint\SwipeSense.dll
+C:\dev\SwipeSense\SwipeSense\obj\Debug\net8.0-windows\SwipeSense.pdb
+C:\dev\SwipeSense\SwipeSense\obj\Debug\net8.0-windows\SwipeSense.genruntimeconfig.cache
+C:\dev\SwipeSense\SwipeSense\obj\Debug\net8.0-windows\ref\SwipeSense.dll
