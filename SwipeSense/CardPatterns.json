@@ -1,0 +1,191 @@
+{
+  "CardPatterns": [
+    {
+      "Name": "Visa",
+      "Region": "Global",
+      "Type": ["Credit", "Debit", "Prepaid"],
+      "CoBrandedWith": [],
+      "ISOStandards": ["ISO/IEC 7812", "ISO/IEC 14443-A"],
+      "Pattern": "^4[0-9]{12}(?:[0-9]{3})?$",
+      "Lengths": [13, 16, 19],
+      "CVVLength": 3,
+      "IINRanges": ["4"]
+    },
+    {
+      "Name": "MasterCard",
+      "Region": "Global",
+      "Type": ["Credit", "Debit", "Prepaid"],
+      "CoBrandedWith": [],
+      "ISOStandards": ["ISO/IEC 7812", "ISO/IEC 14443-A"],
+      "Pattern": "^(5[1-5][0-9]{14}|2(22[1-9][0-9]{12}|2[3-9][0-9]{13}|[3-6][0-9]{14}|7[0-1][0-9]{13}|720[0-9]{12}))$",
+      "Lengths": [16],
+      "CVVLength": 3,
+      "IINRanges": ["51-55", "2221-2720"]
+    },
+    {
+      "Name": "American Express",
+      "Region": "Global",
+      "Type": ["Credit", "Prepaid"],
+      "CoBrandedWith": [],
+      "ISOStandards": ["ISO/IEC 7812", "ISO/IEC 14443-A"],
+      "Pattern": "^3[47][0-9]{13}$",
+      "Lengths": [15],
+      "CVVLength": 4,
+      "IINRanges": ["34", "37"]
+    },
+    {
+      "Name": "Diners Club",
+      "Region": "Global",
+      "Type": ["Credit"],
+      "CoBrandedWith": ["MasterCard"],
+      "ISOStandards": ["ISO/IEC 7812", "ISO/IEC 14443-A"],
+      "Pattern": "^3(?:0[0-5]|[68][0-9])[0-9]{11}$",
+      "Lengths": [14],
+      "CVVLength": 3,
+      "IINRanges": ["300-305", "36", "38"]
+    },
+    {
+      "Name": "Maestro",
+      "Region": "Global",
+      "Type": ["Debit", "Prepaid"],
+      "CoBrandedWith": ["MasterCard"],
+      "ISOStandards": ["ISO/IEC 7812", "ISO/IEC 14443-A"],
+      "Pattern": "^(5018|5020|5038|6304|6759|6761|6763)[0-9]{8,15}$",
+      "Lengths": [12, 13, 14, 15, 16, 17, 18, 19],
+      "CVVLength": 3,
+      "IINRanges": ["5018", "5020", "5038", "6304", "6759", "6761", "6763"]
+    },
+    {
+      "Name": "Visa Electron",
+      "Region": "Global",
+      "Type": ["Debit", "Prepaid"],
+      "CoBrandedWith": ["Visa"],
+      "ISOStandards": ["ISO/IEC 7812", "ISO/IEC 14443-A"],
+      "Pattern": "^(4026|417500|4844|4913|4917)[0-9]{11}$",
+      "Lengths": [16],
+      "CVVLength": 3,
+      "IINRanges": ["4026", "417500", "4844", "4913", "4917"]
+    },
+    {
+      "Name": "Dankort",
+      "Region": "Denmark",
+      "Type": ["Debit"],
+      "CoBrandedWith": ["Visa"],
+      "ISOStandards": ["ISO/IEC 7812", "ISO/IEC 14443-A"],
+      "Pattern": "^5019[0-9]{12}$",
+      "Lengths": [16],
+      "CVVLength": 3,
+      "IINRanges": ["5019"]
+    },
+    {
+      "Name": "DINA",
+      "Region": "Serbia",
+      "Type": ["Debit"],
+      "CoBrandedWith": ["Discover"],
+      "ISOStandards": ["ISO/IEC 7812", "ISO/IEC 14443-A"],
+      "Pattern": "^639[0-9]{13}$",
+      "Lengths": [16],
+      "CVVLength": 3,
+      "IINRanges": ["639"]
+    },
+    {
+      "Name": "Bcard",
+      "Region": "Bulgaria",
+      "Type": ["Debit"],
+      "CoBrandedWith": ["Visa", "MasterCard"],
+      "ISOStandards": ["ISO/IEC 7812", "ISO/IEC 14443-A"],
+      "Pattern": "^2205[0-9]{11}$",
+      "Lengths": [16],
+      "CVVLength": 3,
+      "IINRanges": ["2205"]
+    },
+    {
+      "Name": "Laser",
+      "Region": "Ireland",
+      "Type": ["Debit"],
+      "CoBrandedWith": [],
+      "ISOStandards": ["ISO/IEC 7812", "ISO/IEC 14443-A"],
+      "Pattern": "^(6304|6706|6771|6709)[0-9]{12,15}$",
+      "Lengths": [16, 17, 18, 19],
+      "CVVLength": 3,
+      "IINRanges": ["6304", "6706", "6771", "6709"]
+    },
+    {
+      "Name": "Troy",
+      "Region": "Turkey",
+      "Type": ["Credit", "Debit", "Prepaid"],
+      "CoBrandedWith": [],
+      "ISOStandards": ["ISO/IEC 7812", "ISO/IEC 14443-A"],
+      "Pattern": "^9792[0-9]{12}$",
+      "Lengths": [16],
+      "CVVLength": 3,
+      "IINRanges": ["9792"]
+    },
+    {
+      "Name": "Mir",
+      "Region": "Russia",
+      "Type": ["Credit", "Debit", "Prepaid"],
+      "CoBrandedWith": ["UnionPay"],
+      "ISOStandards": ["ISO/IEC 7812", "ISO/IEC 14443-A"],
+      "Pattern": "^220[0-4][0-9]{12,15}$",
+      "Lengths": [16, 17, 18, 19],
+      "CVVLength": 3,
+      "IINRanges": ["2200-2204"]
+    },
+    {
+      "Name": "Discover",
+      "Region": "USA",
+      "Type": ["Credit", "Debit", "Prepaid"],
+      "CoBrandedWith": [],
+      "ISOStandards": ["ISO/IEC 7812", "ISO/IEC 14443-A"],
+      "Pattern": "^6(?:011|5[0-9]{2})[0-9]{12}$",
+      "Lengths": [16],
+      "CVVLength": 3,
+      "IINRanges": ["6011", "622126-622925", "644-649", "65"]
+    },
+    {
+      "Name": "JCB",
+      "Region": "Japan",
+      "Type": ["Credit", "Debit", "Prepaid"],
+      "CoBrandedWith": [],
+      "ISOStandards": ["ISO/IEC 7812", "ISO/IEC 14443-A"],
+      "Pattern": "^(?:2131|1800|35\\d{3})\\d{11}$",
+      "Lengths": [16],
+      "CVVLength": 3,
+      "IINRanges": ["3528-3589"]
+    },
+    {
+      "Name": "UnionPay",
+      "Region": "China",
+      "Type": ["Credit", "Debit", "Prepaid"],
+      "CoBrandedWith": [],
+      "ISOStandards": ["ISO/IEC 7812", "ISO/IEC 14443-A", "ISO/IEC 14443-B"],
+      "Pattern": "^62[0-9]{14,17}$",
+      "Lengths": [16, 17, 18, 19],
+      "CVVLength": 3,
+      "IINRanges": ["62"]
+    },
+    {
+      "Name": "RuPay",
+      "Region": "India",
+      "Type": ["Credit", "Debit", "Prepaid"],
+      "CoBrandedWith": ["Discover", "JCB"],
+      "ISOStandards": ["ISO/IEC 7812", "ISO/IEC 14443-A"],
+      "Pattern": "^(508[5-9][0-9]{2}|60[8-9][0-9]|81[8-9][0-9]|82[0-9]{2})[0-9]{10,12}$",
+      "Lengths": [16],
+      "CVVLength": 3,
+      "IINRanges": ["60", "65", "81", "82", "508"]
+    },
+    {
+      "Name": "Verve",
+      "Region": "Africa",
+      "Type": ["Debit", "Prepaid"],
+      "CoBrandedWith": [],
+      "ISOStandards": ["ISO/IEC 7812", "ISO/IEC 14443-A"],
+      "Pattern": "^(506[0-9]{3}|65000[0-2]|5078[6-9][0-9])[0-9]{10,13}$",
+      "Lengths": [16, 18, 19],
+      "CVVLength": 3,
+      "IINRanges": ["506099-506198", "650002-650027", "507865-507964"]
+    }
+  ]
+}

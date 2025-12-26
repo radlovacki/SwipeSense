@@ -1,6 +1,4 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-
-public sealed class Parser
+﻿public sealed class Parser
 {
     public string? Track1 { get; private set; }
     public string? Track2 { get; private set; }
@@ -27,6 +25,7 @@ public sealed class Parser
         }
     }
     public string? ServiceCode { get; private set; }
+    public string? DiscretionaryData { get; private set; }
 
     public Parser(string buffer)
     {
@@ -64,5 +63,6 @@ public sealed class Parser
         this.Name = parts[1].Trim();
         this.ExpirationDate = parts[2].Substring(0, 4);
         this.ServiceCode = parts[2].Substring(4, 3);
+        this.DiscretionaryData = parts[2].Substring(7);
     }
 }
