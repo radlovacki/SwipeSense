@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\dev\\SwipeSense\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DAF966B1-D24A-4515-B8D4-6516207E380E}|SwipeSense\\SwipeSense.csproj|c:\\dev\\swipesense\\swipesense\\swipesenseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAF966B1-D24A-4515-B8D4-6516207E380E}|SwipeSense\\SwipeSense.csproj|solutionrelative:swipesense\\swipesenseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DAF966B1-D24A-4515-B8D4-6516207E380E}|SwipeSense\\SwipeSense.csproj|c:\\dev\\swipesense\\swipesense\\swipesenseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DAF966B1-D24A-4515-B8D4-6516207E380E}|SwipeSense\\SwipeSense.csproj|solutionrelative:swipesense\\swipesenseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAF966B1-D24A-4515-B8D4-6516207E380E}|SwipeSense\\SwipeSense.csproj|c:\\dev\\swipesense\\swipesense\\parser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAF966B1-D24A-4515-B8D4-6516207E380E}|SwipeSense\\SwipeSense.csproj|solutionrelative:swipesense\\parser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAF966B1-D24A-4515-B8D4-6516207E380E}|SwipeSense\\SwipeSense.csproj|c:\\dev\\swipesense\\swipesense\\swipesenseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAF966B1-D24A-4515-B8D4-6516207E380E}|SwipeSense\\SwipeSense.csproj|solutionrelative:swipesense\\swipesenseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAF966B1-D24A-4515-B8D4-6516207E380E}|SwipeSense\\SwipeSense.csproj|c:\\dev\\swipesense\\swipesense\\track1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAF966B1-D24A-4515-B8D4-6516207E380E}|SwipeSense\\SwipeSense.csproj|solutionrelative:swipesense\\track1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAF966B1-D24A-4515-B8D4-6516207E380E}|SwipeSense\\SwipeSense.csproj|c:\\dev\\swipesense\\swipesense\\servicecodeparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAF966B1-D24A-4515-B8D4-6516207E380E}|SwipeSense\\SwipeSense.csproj|solutionrelative:swipesense\\servicecodeparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Parser.cs",
-              "DocumentMoniker": "C:\\dev\\SwipeSense\\SwipeSense\\Parser.cs",
-              "RelativeDocumentMoniker": "SwipeSense\\Parser.cs",
-              "ToolTip": "C:\\dev\\SwipeSense\\SwipeSense\\Parser.cs",
-              "RelativeToolTip": "SwipeSense\\Parser.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ServiceCodeParser.cs",
+              "DocumentMoniker": "C:\\dev\\SwipeSense\\SwipeSense\\ServiceCodeParser.cs",
+              "RelativeDocumentMoniker": "SwipeSense\\ServiceCodeParser.cs",
+              "ToolTip": "C:\\dev\\SwipeSense\\SwipeSense\\ServiceCodeParser.cs",
+              "RelativeToolTip": "SwipeSense\\ServiceCodeParser.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T19:32:08.987Z",
+              "WhenOpened": "2025-12-28T22:28:14.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Track1.cs",
+              "DocumentMoniker": "C:\\dev\\SwipeSense\\SwipeSense\\Track1.cs",
+              "RelativeDocumentMoniker": "SwipeSense\\Track1.cs",
+              "ToolTip": "C:\\dev\\SwipeSense\\SwipeSense\\Track1.cs",
+              "RelativeToolTip": "SwipeSense\\Track1.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAcwE8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T21:24:29.977Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "SwipeSenseForm.cs",
+              "DocumentMoniker": "C:\\dev\\SwipeSense\\SwipeSense\\SwipeSenseForm.cs",
+              "RelativeDocumentMoniker": "SwipeSense\\SwipeSenseForm.cs",
+              "ToolTip": "C:\\dev\\SwipeSense\\SwipeSense\\SwipeSenseForm.cs",
+              "RelativeToolTip": "SwipeSense\\SwipeSenseForm.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAIwFEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T11:16:34.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "SwipeSenseForm.cs [Design]",
               "DocumentMoniker": "C:\\dev\\SwipeSense\\SwipeSense\\SwipeSenseForm.cs",
               "RelativeDocumentMoniker": "SwipeSense\\SwipeSenseForm.cs",
               "ToolTip": "C:\\dev\\SwipeSense\\SwipeSense\\SwipeSenseForm.cs [Design]",
               "RelativeToolTip": "SwipeSense\\SwipeSenseForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T19:29:38.702Z",
+              "WhenOpened": "2025-12-26T21:54:13.765Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SwipeSenseForm.cs",
-              "DocumentMoniker": "C:\\dev\\SwipeSense\\SwipeSense\\SwipeSenseForm.cs",
-              "RelativeDocumentMoniker": "SwipeSense\\SwipeSenseForm.cs",
-              "ToolTip": "C:\\dev\\SwipeSense\\SwipeSense\\SwipeSenseForm.cs",
-              "RelativeToolTip": "SwipeSense\\SwipeSenseForm.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAgwGsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T19:28:22.842Z",
-              "EditorCaption": ""
             }
           ]
         }
