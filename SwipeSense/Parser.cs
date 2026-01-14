@@ -4,7 +4,7 @@
     public string? Track2Raw { get; }
     public string? Track3Raw { get; }
     public Track1? Track1 { get; }
-
+    public Track2? Track2 { get; }
     public Parser(string buffer)
     {
         Track1Raw = Extract('%', buffer);
@@ -13,6 +13,9 @@
 
         if (Track1Raw != null)
             Track1 = new Track1(Track1Raw);
+
+        if (Track2Raw != null)
+            Track2 = new Track2(Track2Raw);
     }
 
     private static string? Extract(char sentinel, string data)

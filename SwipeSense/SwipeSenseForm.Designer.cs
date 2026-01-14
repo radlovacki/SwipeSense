@@ -38,23 +38,16 @@
             txtTrack2 = new TextBox();
             txtTrack1 = new TextBox();
             grbTrack1 = new GroupBox();
+            txtName = new TextBox();
+            label1 = new Label();
             txtTitle = new TextBox();
-            label3 = new Label();
             txtMiddleName = new TextBox();
-            lblMiddleName = new Label();
             txtSc3 = new TextBox();
             txtFirstName = new TextBox();
             txtSc2 = new TextBox();
-            lblFirstName = new Label();
             txtEtx = new TextBox();
             lblEtx = new Label();
             txtSurname = new TextBox();
-            lblSurname = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            lblTyoe = new Label();
-            lblRegion = new Label();
-            lblNetwork = new Label();
             txtStx = new TextBox();
             lblSTX = new Label();
             label9 = new Label();
@@ -74,14 +67,19 @@
             txtDate = new TextBox();
             label7 = new Label();
             txtType = new TextBox();
-            label6 = new Label();
             txtLrc = new TextBox();
             txtCvv = new TextBox();
             txtIso = new TextBox();
             dlgSave = new SaveFileDialog();
+            groupBox1 = new GroupBox();
+            txtT2pan = new TextBox();
+            lblT2pan = new Label();
+            txtT2stx = new TextBox();
+            label2 = new Label();
             tsMenu.SuspendLayout();
             grbTracks.SuspendLayout();
             grbTrack1.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // tsMenu
@@ -118,12 +116,15 @@
             // 
             // txtTracks
             // 
-            txtTracks.Font = new Font("Consolas", 10F);
+            txtTracks.BackColor = Color.White;
+            txtTracks.Font = new Font("Consolas", 10F, FontStyle.Bold);
+            txtTracks.ForeColor = Color.Black;
             txtTracks.Location = new Point(12, 28);
             txtTracks.Name = "txtTracks";
             txtTracks.ReadOnly = true;
             txtTracks.Size = new Size(1240, 23);
-            txtTracks.TabIndex = 1;
+            txtTracks.TabIndex = 0;
+            txtTracks.TextAlign = HorizontalAlignment.Center;
             // 
             // grbTracks
             // 
@@ -133,7 +134,7 @@
             grbTracks.Location = new Point(12, 57);
             grbTracks.Name = "grbTracks";
             grbTracks.Size = new Size(1240, 113);
-            grbTracks.TabIndex = 2;
+            grbTracks.TabIndex = 1;
             grbTracks.TabStop = false;
             grbTracks.Text = "Tracks";
             // 
@@ -146,7 +147,7 @@
             txtTrack3.Name = "txtTrack3";
             txtTrack3.ReadOnly = true;
             txtTrack3.Size = new Size(1228, 23);
-            txtTrack3.TabIndex = 4;
+            txtTrack3.TabIndex = 3;
             // 
             // txtTrack2
             // 
@@ -157,7 +158,7 @@
             txtTrack2.Name = "txtTrack2";
             txtTrack2.ReadOnly = true;
             txtTrack2.Size = new Size(1228, 23);
-            txtTrack2.TabIndex = 4;
+            txtTrack2.TabIndex = 2;
             // 
             // txtTrack1
             // 
@@ -168,27 +169,20 @@
             txtTrack1.Name = "txtTrack1";
             txtTrack1.ReadOnly = true;
             txtTrack1.Size = new Size(1228, 23);
-            txtTrack1.TabIndex = 3;
+            txtTrack1.TabIndex = 1;
             // 
             // grbTrack1
             // 
+            grbTrack1.Controls.Add(txtName);
+            grbTrack1.Controls.Add(label1);
             grbTrack1.Controls.Add(txtTitle);
-            grbTrack1.Controls.Add(label3);
             grbTrack1.Controls.Add(txtMiddleName);
-            grbTrack1.Controls.Add(lblMiddleName);
             grbTrack1.Controls.Add(txtSc3);
             grbTrack1.Controls.Add(txtFirstName);
             grbTrack1.Controls.Add(txtSc2);
-            grbTrack1.Controls.Add(lblFirstName);
             grbTrack1.Controls.Add(txtEtx);
             grbTrack1.Controls.Add(lblEtx);
             grbTrack1.Controls.Add(txtSurname);
-            grbTrack1.Controls.Add(lblSurname);
-            grbTrack1.Controls.Add(label2);
-            grbTrack1.Controls.Add(label1);
-            grbTrack1.Controls.Add(lblTyoe);
-            grbTrack1.Controls.Add(lblRegion);
-            grbTrack1.Controls.Add(lblNetwork);
             grbTrack1.Controls.Add(txtStx);
             grbTrack1.Controls.Add(lblSTX);
             grbTrack1.Controls.Add(label9);
@@ -208,107 +202,105 @@
             grbTrack1.Controls.Add(txtDate);
             grbTrack1.Controls.Add(label7);
             grbTrack1.Controls.Add(txtType);
-            grbTrack1.Controls.Add(label6);
             grbTrack1.Controls.Add(txtLrc);
             grbTrack1.Controls.Add(txtCvv);
             grbTrack1.Controls.Add(txtIso);
             grbTrack1.Location = new Point(12, 176);
             grbTrack1.Name = "grbTrack1";
-            grbTrack1.Size = new Size(1234, 141);
-            grbTrack1.TabIndex = 3;
+            grbTrack1.Size = new Size(1234, 171);
+            grbTrack1.TabIndex = 4;
             grbTrack1.TabStop = false;
             grbTrack1.Text = "Track 1";
             // 
+            // txtName
+            // 
+            txtName.Font = new Font("Consolas", 10F);
+            txtName.Location = new Point(72, 80);
+            txtName.Name = "txtName";
+            txtName.ReadOnly = true;
+            txtName.Size = new Size(207, 23);
+            txtName.TabIndex = 14;
+            txtName.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(0, 84);
+            label1.Name = "label1";
+            label1.Size = new Size(66, 15);
+            label1.TabIndex = 8;
+            label1.Text = "Cardholder";
+            label1.TextAlign = ContentAlignment.MiddleRight;
+            // 
             // txtTitle
             // 
+            txtTitle.BackColor = Color.Silver;
             txtTitle.Font = new Font("Consolas", 10F);
-            txtTitle.Location = new Point(972, 52);
+            txtTitle.Location = new Point(853, 80);
             txtTitle.Name = "txtTitle";
             txtTitle.ReadOnly = true;
-            txtTitle.Size = new Size(50, 23);
-            txtTitle.TabIndex = 14;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(937, 56);
-            label3.Name = "label3";
-            label3.Size = new Size(29, 15);
-            label3.TabIndex = 10;
-            label3.Text = "Title";
-            label3.TextAlign = ContentAlignment.MiddleRight;
+            txtTitle.Size = new Size(150, 23);
+            txtTitle.TabIndex = 18;
+            txtTitle.TextAlign = HorizontalAlignment.Center;
             // 
             // txtMiddleName
             // 
+            txtMiddleName.BackColor = Color.Silver;
             txtMiddleName.Font = new Font("Consolas", 10F);
-            txtMiddleName.Location = new Point(911, 52);
+            txtMiddleName.Location = new Point(697, 80);
             txtMiddleName.Name = "txtMiddleName";
             txtMiddleName.ReadOnly = true;
-            txtMiddleName.Size = new Size(20, 23);
-            txtMiddleName.TabIndex = 9;
-            // 
-            // lblMiddleName
-            // 
-            lblMiddleName.AutoSize = true;
-            lblMiddleName.Location = new Point(826, 56);
-            lblMiddleName.Name = "lblMiddleName";
-            lblMiddleName.Size = new Size(79, 15);
-            lblMiddleName.TabIndex = 9;
-            lblMiddleName.Text = "Middle Name";
-            lblMiddleName.TextAlign = ContentAlignment.MiddleCenter;
+            txtMiddleName.Size = new Size(150, 23);
+            txtMiddleName.TabIndex = 17;
+            txtMiddleName.TextAlign = HorizontalAlignment.Center;
             // 
             // txtSc3
             // 
             txtSc3.BackColor = Color.Silver;
             txtSc3.Font = new Font("Consolas", 10F);
-            txtSc3.Location = new Point(828, 81);
+            txtSc3.Location = new Point(817, 109);
             txtSc3.Name = "txtSc3";
             txtSc3.ReadOnly = true;
-            txtSc3.Size = new Size(400, 23);
-            txtSc3.TabIndex = 14;
+            txtSc3.Size = new Size(411, 23);
+            txtSc3.TabIndex = 24;
+            txtSc3.TextAlign = HorizontalAlignment.Center;
             // 
             // txtFirstName
             // 
+            txtFirstName.BackColor = Color.Silver;
             txtFirstName.Font = new Font("Consolas", 10F);
-            txtFirstName.Location = new Point(720, 52);
+            txtFirstName.Location = new Point(491, 80);
             txtFirstName.Name = "txtFirstName";
             txtFirstName.ReadOnly = true;
-            txtFirstName.Size = new Size(100, 23);
-            txtFirstName.TabIndex = 8;
+            txtFirstName.Size = new Size(200, 23);
+            txtFirstName.TabIndex = 16;
+            txtFirstName.TextAlign = HorizontalAlignment.Center;
             // 
             // txtSc2
             // 
             txtSc2.BackColor = Color.Silver;
             txtSc2.Font = new Font("Consolas", 10F);
-            txtSc2.Location = new Point(418, 81);
+            txtSc2.Location = new Point(441, 109);
             txtSc2.Name = "txtSc2";
             txtSc2.ReadOnly = true;
-            txtSc2.Size = new Size(400, 23);
-            txtSc2.TabIndex = 14;
-            // 
-            // lblFirstName
-            // 
-            lblFirstName.AutoSize = true;
-            lblFirstName.Location = new Point(651, 56);
-            lblFirstName.Name = "lblFirstName";
-            lblFirstName.Size = new Size(64, 15);
-            lblFirstName.TabIndex = 8;
-            lblFirstName.Text = "First Name";
-            lblFirstName.TextAlign = ContentAlignment.MiddleRight;
+            txtSc2.Size = new Size(370, 23);
+            txtSc2.TabIndex = 23;
+            txtSc2.TextAlign = HorizontalAlignment.Center;
             // 
             // txtEtx
             // 
             txtEtx.Font = new Font("Consolas", 10F);
-            txtEtx.Location = new Point(346, 110);
+            txtEtx.Location = new Point(360, 138);
             txtEtx.Name = "txtEtx";
             txtEtx.ReadOnly = true;
             txtEtx.Size = new Size(15, 23);
-            txtEtx.TabIndex = 6;
+            txtEtx.TabIndex = 26;
+            txtEtx.TextAlign = HorizontalAlignment.Center;
             // 
             // lblEtx
             // 
             lblEtx.AutoSize = true;
-            lblEtx.Location = new Point(314, 113);
+            lblEtx.Location = new Point(328, 141);
             lblEtx.Name = "lblEtx";
             lblEtx.Size = new Size(26, 15);
             lblEtx.TabIndex = 12;
@@ -317,86 +309,29 @@
             // 
             // txtSurname
             // 
+            txtSurname.BackColor = Color.Silver;
             txtSurname.Font = new Font("Consolas", 10F);
-            txtSurname.Location = new Point(544, 52);
+            txtSurname.Location = new Point(285, 80);
             txtSurname.Name = "txtSurname";
             txtSurname.ReadOnly = true;
-            txtSurname.Size = new Size(100, 23);
-            txtSurname.TabIndex = 7;
-            // 
-            // lblSurname
-            // 
-            lblSurname.AutoSize = true;
-            lblSurname.Location = new Point(485, 55);
-            lblSurname.Name = "lblSurname";
-            lblSurname.Size = new Size(54, 15);
-            lblSurname.TabIndex = 7;
-            lblSurname.Text = "Surname";
-            lblSurname.TextAlign = ContentAlignment.MiddleRight;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(382, 56);
-            label2.Name = "label2";
-            label2.Size = new Size(69, 15);
-            label2.TabIndex = 5;
-            label2.Text = "CVV Length";
-            label2.TextAlign = ContentAlignment.MiddleRight;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 56);
-            label1.Name = "label1";
-            label1.Size = new Size(54, 15);
-            label1.TabIndex = 5;
-            label1.Text = "Standard";
-            label1.TextAlign = ContentAlignment.MiddleRight;
-            // 
-            // lblTyoe
-            // 
-            lblTyoe.AutoSize = true;
-            lblTyoe.Location = new Point(1009, 26);
-            lblTyoe.Name = "lblTyoe";
-            lblTyoe.Size = new Size(31, 15);
-            lblTyoe.TabIndex = 6;
-            lblTyoe.Text = "Type";
-            lblTyoe.TextAlign = ContentAlignment.MiddleRight;
-            // 
-            // lblRegion
-            // 
-            lblRegion.AutoSize = true;
-            lblRegion.Location = new Point(806, 26);
-            lblRegion.Name = "lblRegion";
-            lblRegion.Size = new Size(92, 15);
-            lblRegion.TabIndex = 6;
-            lblRegion.Text = "Region/Country";
-            lblRegion.TextAlign = ContentAlignment.MiddleRight;
-            // 
-            // lblNetwork
-            // 
-            lblNetwork.AutoSize = true;
-            lblNetwork.Location = new Point(650, 26);
-            lblNetwork.Name = "lblNetwork";
-            lblNetwork.Size = new Size(38, 15);
-            lblNetwork.TabIndex = 5;
-            lblNetwork.Text = "Brand";
-            lblNetwork.TextAlign = ContentAlignment.MiddleRight;
+            txtSurname.Size = new Size(200, 23);
+            txtSurname.TabIndex = 15;
+            txtSurname.TextAlign = HorizontalAlignment.Center;
             // 
             // txtStx
             // 
             txtStx.Font = new Font("Consolas", 10F);
-            txtStx.Location = new Point(38, 23);
+            txtStx.Location = new Point(32, 23);
             txtStx.Name = "txtStx";
             txtStx.ReadOnly = true;
             txtStx.Size = new Size(15, 23);
-            txtStx.TabIndex = 5;
+            txtStx.TabIndex = 4;
+            txtStx.TextAlign = HorizontalAlignment.Center;
             // 
             // lblSTX
             // 
             lblSTX.AutoSize = true;
-            lblSTX.Location = new Point(6, 26);
+            lblSTX.Location = new Point(0, 26);
             lblSTX.Name = "lblSTX";
             lblSTX.Size = new Size(26, 15);
             lblSTX.TabIndex = 4;
@@ -406,7 +341,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(6, 113);
+            label9.Location = new Point(0, 142);
             label9.Name = "label9";
             label9.Size = new Size(23, 15);
             label9.TabIndex = 11;
@@ -416,16 +351,17 @@
             // txtDd
             // 
             txtDd.Font = new Font("Consolas", 10F);
-            txtDd.Location = new Point(35, 110);
+            txtDd.Location = new Point(29, 138);
             txtDd.Name = "txtDd";
             txtDd.ReadOnly = true;
             txtDd.Size = new Size(273, 23);
-            txtDd.TabIndex = 14;
+            txtDd.TabIndex = 25;
+            txtDd.TextAlign = HorizontalAlignment.Center;
             // 
             // lblFC
             // 
             lblFC.AutoSize = true;
-            lblFC.Location = new Point(59, 26);
+            lblFC.Location = new Point(53, 26);
             lblFC.Name = "lblFC";
             lblFC.Size = new Size(21, 15);
             lblFC.TabIndex = 0;
@@ -435,26 +371,28 @@
             // txtFormatCode
             // 
             txtFormatCode.Font = new Font("Consolas", 10F);
-            txtFormatCode.Location = new Point(86, 23);
+            txtFormatCode.Location = new Point(80, 22);
             txtFormatCode.Name = "txtFormatCode";
             txtFormatCode.ReadOnly = true;
             txtFormatCode.Size = new Size(15, 23);
-            txtFormatCode.TabIndex = 4;
+            txtFormatCode.TabIndex = 5;
+            txtFormatCode.TextAlign = HorizontalAlignment.Center;
             // 
             // txtFormatCodeDescription
             // 
             txtFormatCodeDescription.BackColor = Color.Silver;
             txtFormatCodeDescription.Font = new Font("Consolas", 10F);
-            txtFormatCodeDescription.Location = new Point(107, 23);
+            txtFormatCodeDescription.Location = new Point(98, 22);
             txtFormatCodeDescription.Name = "txtFormatCodeDescription";
             txtFormatCodeDescription.ReadOnly = true;
-            txtFormatCodeDescription.Size = new Size(269, 23);
-            txtFormatCodeDescription.TabIndex = 5;
+            txtFormatCodeDescription.Size = new Size(338, 23);
+            txtFormatCodeDescription.TabIndex = 6;
+            txtFormatCodeDescription.TextAlign = HorizontalAlignment.Center;
             // 
             // lblPan
             // 
             lblPan.AutoSize = true;
-            lblPan.Location = new Point(382, 26);
+            lblPan.Location = new Point(0, 55);
             lblPan.Name = "lblPan";
             lblPan.Size = new Size(30, 15);
             lblPan.TabIndex = 4;
@@ -464,55 +402,60 @@
             // txtPrimaryAccountNumber
             // 
             txtPrimaryAccountNumber.Font = new Font("Consolas", 10F);
-            txtPrimaryAccountNumber.Location = new Point(418, 23);
+            txtPrimaryAccountNumber.Location = new Point(36, 51);
             txtPrimaryAccountNumber.Name = "txtPrimaryAccountNumber";
             txtPrimaryAccountNumber.ReadOnly = true;
             txtPrimaryAccountNumber.Size = new Size(170, 23);
-            txtPrimaryAccountNumber.TabIndex = 6;
+            txtPrimaryAccountNumber.TabIndex = 7;
+            txtPrimaryAccountNumber.TextAlign = HorizontalAlignment.Center;
             // 
             // txtPrimaryAccountNumberValidated
             // 
             txtPrimaryAccountNumberValidated.BackColor = Color.Silver;
             txtPrimaryAccountNumberValidated.Font = new Font("Consolas", 10F);
-            txtPrimaryAccountNumberValidated.Location = new Point(594, 23);
+            txtPrimaryAccountNumberValidated.Location = new Point(212, 51);
             txtPrimaryAccountNumberValidated.Name = "txtPrimaryAccountNumberValidated";
             txtPrimaryAccountNumberValidated.ReadOnly = true;
-            txtPrimaryAccountNumberValidated.Size = new Size(50, 23);
-            txtPrimaryAccountNumberValidated.TabIndex = 7;
+            txtPrimaryAccountNumberValidated.Size = new Size(62, 23);
+            txtPrimaryAccountNumberValidated.TabIndex = 8;
+            txtPrimaryAccountNumberValidated.TextAlign = HorizontalAlignment.Center;
             // 
             // txtSc1
             // 
             txtSc1.BackColor = Color.Silver;
             txtSc1.Font = new Font("Consolas", 10F);
-            txtSc1.Location = new Point(6, 81);
+            txtSc1.Location = new Point(63, 109);
             txtSc1.Name = "txtSc1";
             txtSc1.ReadOnly = true;
-            txtSc1.Size = new Size(400, 23);
-            txtSc1.TabIndex = 14;
+            txtSc1.Size = new Size(372, 23);
+            txtSc1.TabIndex = 22;
+            txtSc1.TextAlign = HorizontalAlignment.Center;
             // 
             // txtBrand
             // 
             txtBrand.BackColor = Color.Silver;
             txtBrand.Font = new Font("Consolas", 10F);
-            txtBrand.Location = new Point(694, 23);
+            txtBrand.Location = new Point(280, 51);
             txtBrand.Name = "txtBrand";
             txtBrand.ReadOnly = true;
-            txtBrand.Size = new Size(106, 23);
-            txtBrand.TabIndex = 7;
+            txtBrand.Size = new Size(150, 23);
+            txtBrand.TabIndex = 9;
+            txtBrand.TextAlign = HorizontalAlignment.Center;
             // 
             // txtSc
             // 
             txtSc.Font = new Font("Consolas", 10F);
-            txtSc.Location = new Point(1198, 52);
+            txtSc.Location = new Point(27, 109);
             txtSc.Name = "txtSc";
             txtSc.ReadOnly = true;
             txtSc.Size = new Size(30, 23);
-            txtSc.TabIndex = 13;
+            txtSc.TabIndex = 21;
+            txtSc.TextAlign = HorizontalAlignment.Center;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(1171, 56);
+            label8.Location = new Point(0, 113);
             label8.Name = "label8";
             label8.Size = new Size(21, 15);
             label8.TabIndex = 10;
@@ -523,35 +466,38 @@
             // 
             txtRegion.BackColor = Color.Silver;
             txtRegion.Font = new Font("Consolas", 10F);
-            txtRegion.Location = new Point(904, 23);
+            txtRegion.Location = new Point(436, 51);
             txtRegion.Name = "txtRegion";
             txtRegion.ReadOnly = true;
-            txtRegion.Size = new Size(99, 23);
-            txtRegion.TabIndex = 8;
+            txtRegion.Size = new Size(197, 23);
+            txtRegion.TabIndex = 10;
+            txtRegion.TextAlign = HorizontalAlignment.Center;
             // 
             // txtExpired
             // 
             txtExpired.BackColor = Color.Silver;
             txtExpired.Font = new Font("Consolas", 10F);
-            txtExpired.Location = new Point(1110, 52);
+            txtExpired.Location = new Point(1161, 80);
             txtExpired.Name = "txtExpired";
             txtExpired.ReadOnly = true;
-            txtExpired.Size = new Size(55, 23);
-            txtExpired.TabIndex = 8;
+            txtExpired.Size = new Size(67, 23);
+            txtExpired.TabIndex = 20;
+            txtExpired.TextAlign = HorizontalAlignment.Center;
             // 
             // txtDate
             // 
             txtDate.Font = new Font("Consolas", 10F);
-            txtDate.Location = new Point(1064, 52);
+            txtDate.Location = new Point(1107, 80);
             txtDate.Name = "txtDate";
             txtDate.ReadOnly = true;
-            txtDate.Size = new Size(40, 23);
-            txtDate.TabIndex = 7;
+            txtDate.Size = new Size(48, 23);
+            txtDate.TabIndex = 19;
+            txtDate.TextAlign = HorizontalAlignment.Center;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(1028, 56);
+            label7.Location = new Point(1070, 83);
             label7.Name = "label7";
             label7.Size = new Size(31, 15);
             label7.TabIndex = 6;
@@ -562,57 +508,105 @@
             // 
             txtType.BackColor = Color.Silver;
             txtType.Font = new Font("Consolas", 10F);
-            txtType.Location = new Point(1046, 23);
+            txtType.Location = new Point(639, 51);
             txtType.Name = "txtType";
             txtType.ReadOnly = true;
-            txtType.Size = new Size(182, 23);
-            txtType.TabIndex = 9;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(367, 113);
-            label6.Name = "label6";
-            label6.Size = new Size(84, 15);
-            label6.TabIndex = 10;
-            label6.Text = "CalculatedLRC";
-            label6.TextAlign = ContentAlignment.MiddleRight;
+            txtType.Size = new Size(219, 23);
+            txtType.TabIndex = 11;
+            txtType.TextAlign = HorizontalAlignment.Center;
             // 
             // txtLrc
             // 
             txtLrc.BackColor = Color.Silver;
             txtLrc.Font = new Font("Consolas", 10F);
-            txtLrc.Location = new Point(454, 110);
+            txtLrc.Location = new Point(1086, 138);
             txtLrc.Name = "txtLrc";
             txtLrc.ReadOnly = true;
-            txtLrc.Size = new Size(25, 23);
-            txtLrc.TabIndex = 12;
+            txtLrc.Size = new Size(142, 23);
+            txtLrc.TabIndex = 27;
+            txtLrc.TextAlign = HorizontalAlignment.Center;
             // 
             // txtCvv
             // 
             txtCvv.BackColor = Color.Silver;
             txtCvv.Font = new Font("Consolas", 10F);
-            txtCvv.Location = new Point(464, 52);
+            txtCvv.Location = new Point(1116, 52);
             txtCvv.Name = "txtCvv";
             txtCvv.ReadOnly = true;
-            txtCvv.Size = new Size(15, 23);
-            txtCvv.TabIndex = 10;
+            txtCvv.Size = new Size(112, 23);
+            txtCvv.TabIndex = 13;
+            txtCvv.TextAlign = HorizontalAlignment.Center;
             // 
             // txtIso
             // 
             txtIso.BackColor = Color.Silver;
             txtIso.Font = new Font("Consolas", 10F);
-            txtIso.Location = new Point(66, 52);
+            txtIso.Location = new Point(864, 52);
             txtIso.Name = "txtIso";
             txtIso.ReadOnly = true;
-            txtIso.Size = new Size(310, 23);
-            txtIso.TabIndex = 11;
+            txtIso.Size = new Size(246, 23);
+            txtIso.TabIndex = 12;
+            txtIso.TextAlign = HorizontalAlignment.Center;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(txtT2stx);
+            groupBox1.Controls.Add(txtT2pan);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(lblT2pan);
+            groupBox1.Location = new Point(12, 353);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(1228, 183);
+            groupBox1.TabIndex = 28;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Track 2";
+            // 
+            // txtT2pan
+            // 
+            txtT2pan.Font = new Font("Consolas", 10F);
+            txtT2pan.Location = new Point(36, 51);
+            txtT2pan.Name = "txtT2pan";
+            txtT2pan.ReadOnly = true;
+            txtT2pan.Size = new Size(170, 23);
+            txtT2pan.TabIndex = 29;
+            txtT2pan.TextAlign = HorizontalAlignment.Center;
+            // 
+            // lblT2pan
+            // 
+            lblT2pan.AutoSize = true;
+            lblT2pan.Location = new Point(0, 54);
+            lblT2pan.Name = "lblT2pan";
+            lblT2pan.Size = new Size(30, 15);
+            lblT2pan.TabIndex = 29;
+            lblT2pan.Text = "PAN";
+            lblT2pan.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // txtT2stx
+            // 
+            txtT2stx.Font = new Font("Consolas", 10F);
+            txtT2stx.Location = new Point(29, 22);
+            txtT2stx.Name = "txtT2stx";
+            txtT2stx.ReadOnly = true;
+            txtT2stx.Size = new Size(15, 23);
+            txtT2stx.TabIndex = 28;
+            txtT2stx.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(0, 25);
+            label2.Name = "label2";
+            label2.Size = new Size(26, 15);
+            label2.TabIndex = 30;
+            label2.Text = "STX";
+            label2.TextAlign = ContentAlignment.MiddleRight;
             // 
             // SwipeSenseForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1264, 681);
+            Controls.Add(groupBox1);
             Controls.Add(grbTrack1);
             Controls.Add(grbTracks);
             Controls.Add(txtTracks);
@@ -628,6 +622,8 @@
             grbTracks.PerformLayout();
             grbTrack1.ResumeLayout(false);
             grbTrack1.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -656,7 +652,6 @@
         private Label label7;
         private TextBox txtDate;
         private TextBox txtLrc;
-        private Label label6;
         private TextBox txtIso;
         private TextBox txtSc;
         private Label label9;
@@ -668,21 +663,19 @@
         private SaveFileDialog dlgSave;
         private TextBox txtStx;
         private Label lblSTX;
-        private Label lblNetwork;
-        private Label lblRegion;
-        private Label lblTyoe;
-        private Label label2;
-        private Label label1;
         private ToolStripButton tsbOpen;
         private TextBox txtSurname;
-        private Label lblSurname;
         private TextBox txtEtx;
         private Label lblEtx;
         private TextBox txtFirstName;
-        private Label lblFirstName;
         private TextBox txtMiddleName;
-        private Label lblMiddleName;
         private TextBox txtTitle;
-        private Label label3;
+        private Label label1;
+        private TextBox txtName;
+        private GroupBox groupBox1;
+        private TextBox txtT2pan;
+        private Label lblT2pan;
+        private TextBox txtT2stx;
+        private Label label2;
     }
 }

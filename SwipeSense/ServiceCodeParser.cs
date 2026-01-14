@@ -1,4 +1,48 @@
-﻿public static class ServiceCodeParser
+﻿/// <summary>
+/// Provides parsing and decoding utilities for the three-digit Service Code
+/// contained in Track 1 and Track 2 of magnetic stripe cards, as defined by
+/// ISO/IEC 7813.
+/// </summary>
+/// <remarks>
+/// © 2025 Velimir Radlovački.
+/// All rights reserved.
+/// 
+/// The Service Code is a three-numeric-digit field that defines transaction
+/// acceptance rules, authorization requirements, and usage restrictions
+/// associated with a payment card.
+///
+/// Each digit of the Service Code has an independent semantic meaning:
+/// <list type="bullet">
+/// <item>
+/// <description>
+/// <b>Digit 1</b> — Interchange rules and technology requirements
+/// (e.g. international vs. national usage, IC/chip required).
+/// </description>
+/// </item>
+/// <item>
+/// <description>
+/// <b>Digit 2</b> — Authorization processing rules
+/// (e.g. normal authorization, online authorization required).
+/// </description>
+/// </item>
+/// <item>
+/// <description>
+/// <b>Digit 3</b> — Allowed services and usage restrictions
+/// (e.g. ATM only, goods and services only, PIN requirements).
+/// </description>
+/// </item>
+/// </list>
+///
+/// The decoding logic implemented in this class follows ISO/IEC 7813 definitions
+/// and established payment-network conventions. Values marked as
+/// "For future use by ISO" are reserved and intentionally not interpreted beyond
+/// their standardized designation.
+///
+/// This class performs syntactic validation of the Service Code format but does
+/// not assess card authenticity, issuer policy enforcement, or real-time
+/// authorization behavior.
+/// </remarks>
+public static class ServiceCodeParser
 {
     public static ServiceCodeInfo? Parse(string serviceCode)
     {

@@ -9,7 +9,7 @@
     public bool LuhnValid =>
         !string.IsNullOrEmpty(PrimaryAccountNumber) &&
         LuhnCheck.Check(PrimaryAccountNumber);
-//    public string? Name { get; }
+    public string? Name { get; }
     public string? Surname { get; }
     public string? FirstName { get; }
     public string? MiddleName { get; }
@@ -63,12 +63,12 @@
 
         PrimaryAccountNumber = parts[0].Substring(1);
 
-        string name = parts[1].Trim();
-        int slashIndex = name.IndexOf('/');
+        Name = parts[1].Trim();
+        int slashIndex = Name.IndexOf('/');
         if (slashIndex < 0)
             return;
-        Surname = name.Substring(0, slashIndex).Trim();
-        string remainder = name.Substring(slashIndex + 1).Trim();
+        Surname = Name.Substring(0, slashIndex).Trim();
+        string remainder = Name.Substring(slashIndex + 1).Trim();
         string[] nameParts = remainder.Split(' ', StringSplitOptions.RemoveEmptyEntries);
         if (nameParts.Length >= 1)
             FirstName = nameParts[0];

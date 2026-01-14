@@ -1,5 +1,4 @@
 using System.Text;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SwipeSense
 {
@@ -30,13 +29,14 @@ namespace SwipeSense
         {
             Parser parser = new Parser(buffer);
             txtTracks.Text = buffer;
-            if (parser.Track1 == null)
-                return;
-            Track1 t1 = parser.Track1;
             txtTrack1.Text = parser.Track1Raw ?? string.Empty;
             txtTrack2.Text = parser.Track2Raw ?? string.Empty;
             txtTrack3.Text = parser.Track3Raw ?? string.Empty;
-
+            
+            if (parser.Track1 == null)
+                return;
+            Track1 t1 = parser.Track1;
+            
             txtStx.Text = t1.StartSentinel.ToString();
             txtFormatCode.Text = t1.FormatCode.ToString();
             txtFormatCodeDescription.Text = t1.FormatDescription;
@@ -64,22 +64,22 @@ namespace SwipeSense
                 txtPrimaryAccountNumberValidated.Text = "Invalid";
             }
 
-            var repo = new CardPatternRepository("card_patterns_enhanced.json");
+            var repo = new CardPatternRepository();
             if (repo.IsValidPAN(pan))
             {
-                txtBrand.Text = repo.FindByPAN(pan)?.Name ?? "Unknown";
-                txtRegion.Text = repo.FindByPAN(pan)?.Region + "/" + repo.FindByPAN(pan)?.Country;
+                txtBrand.Text = "Brand: " + repo.FindByPAN(pan)?.Name ?? "Brand: Unknown";
+                txtRegion.Text = "Region/Country: " + repo.FindByPAN(pan)?.Region + "/" + repo.FindByPAN(pan)?.Country;
                 txtType.Text = (repo.FindByPAN(pan)?.Type != null && repo.FindByPAN(pan)!.Type.Count > 0)
-                    ? string.Join(", ", repo.FindByPAN(pan)!.Type) : "Unknown";
+                    ? "Type: " + string.Join(", ", repo.FindByPAN(pan)!.Type) : "Type: Unknown";
                 txtIso.Text = (repo.FindByPAN(pan)?.ISOStandards != null)
-                    ? string.Join(", ", repo.FindByPAN(pan)!.ISOStandards) : "Unknown";
-                txtCvv.Text = repo.FindByPAN(pan)?.CVVLength.ToString() ?? "Unknown";
+                    ? "ISO/IEC: " + string.Join(", ", repo.FindByPAN(pan)!.ISOStandards) : "Standards: Unknown";
+                txtCvv.Text = "CVV Length: " + repo.FindByPAN(pan)?.CVVLength.ToString() ?? "CVV Length: Unknown";
             }
-            
-            txtSurname.Text = t1.Surname ?? string.Empty;
-            txtFirstName.Text = t1.FirstName ?? string.Empty;
-            txtMiddleName.Text = t1.MiddleName ?? string.Empty;
-            txtTitle.Text = t1.Title ?? string.Empty;
+            txtName.Text = t1.Name ?? string.Empty;
+            txtSurname.Text = "Surname: " + t1.Surname ?? string.Empty;
+            txtFirstName.Text = "First Name: " + t1.FirstName ?? string.Empty;
+            txtMiddleName.Text = "Middle Name: " + t1.MiddleName ?? string.Empty;
+            txtTitle.Text = "Title: " + t1.Title ?? string.Empty;
 
             txtDate.Text = (string.Concat(t1.ExpirationDate.AsSpan(2, 2), "/", t1.ExpirationDate.AsSpan(0, 2))) ?? string.Empty;
 
@@ -98,16 +98,23 @@ namespace SwipeSense
             ServiceCodeInfo? sc = t1.ServiceCode != null ? ServiceCodeParser.Parse(t1.ServiceCode) : null;
             if (sc != null)
             {
-                txtSc1.Text = sc.Meaning1;
-                txtSc2.Text = sc.Meaning2;
-                txtSc3.Text = sc.Meaning3;
+                txtSc1.Text = "1: " + sc.Meaning1;
+                txtSc2.Text = "2: " + sc.Meaning2;
+                txtSc3.Text = "3: " + sc.Meaning3;
             }
 
             txtDd.Text = t1.DiscretionaryData ?? string.Empty;
 
             txtEtx.Text = t1.EndSentinel.ToString();
 
-            txtLrc.Text = LrcCalculator.CalculateAsciiLrc(parser.Track1Raw ?? string.Empty).ToString("X2");
+            txtLrc.Text = "Calculated LRC: " + LrcCalculator.CalculateAsciiLrc(parser.Track1Raw ?? string.Empty).ToString("X2");
+
+            if (parser.Track2 == null)
+                return;
+            Track2 t2 = parser.Track2;
+
+            txtT2stx.Text = t2.StartSentinel.ToString();
+            txtT2pan.Text = t2.PrimaryAccountNumber ?? string.Empty;
         }
 
         private void tsbSave_Click(object sender, EventArgs e)
